@@ -1,4 +1,12 @@
-﻿Imports WMPLib
+﻿'''''''''''''''''''''''
+'3/13/21
+'this is the main code for the whole game, rest is for menu navigation
+'Celestine Dew
+'Alfredo Alamdar
+'Jacob Pickett
+'''''''''''''''''''''''
+
+Imports WMPLib
 Imports System.IO
 Public Class Form2
     Private Sub HowTo_Click(sender As Object, e As EventArgs) Handles HowTo.Click
@@ -6,11 +14,10 @@ Public Class Form2
         Form4.Show()
 
     End Sub
-
     Private Sub Quit_Click(sender As Object, e As EventArgs) Handles Quit.Click
         Application.Exit()
     End Sub
-
+    'moves the character around
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles btnW.Click
         PictureBox1.Top -= 5
     End Sub
@@ -48,20 +55,21 @@ Public Class Form2
             PictureBox3.Left = 0 - PictureBox3.Width
         End If
     End Sub
-
+    'loads and plays the music 
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         My.Computer.Audio.Play("TallGrass.wav",
         AudioPlayMode.BackgroundLoop)
         Carrot1.Left += 8000
 
     End Sub
-
+    'moves the carrot and snakes
     Private Sub Timer2_Tick(sender As Object, e As EventArgs) Handles Timer2.Tick
         Carrot1.Left -= 15
         Snake1.Left -= 10
         Snake2.Left -= 10
     End Sub
-
+    'all the work for collision and making sure the 
+    'snakes and carrots come back if they go off the edge
     Private Sub Timer3_Tick(sender As Object, e As EventArgs) Handles Timer3.Tick
 
         Dim collisionC As Boolean
@@ -69,7 +77,7 @@ Public Class Form2
         Dim Score As Integer = 0
         Dim collected As Boolean
         For Each PictureBox In Me.Controls
-
+            'checks if two pictureboxs are intersecting and does the right boolen depending
             If PictureBox1.Bounds.IntersectsWith(Carrot1.Bounds) Then
                 collisionC = True
                 collected = True
@@ -84,7 +92,7 @@ Public Class Form2
                 Carrot1.Hide()
             Else : collected = False
             End If
-
+            'checks if two pictureboxs are intersecting and does the right boolen depending
             If PictureBox1.Bounds.IntersectsWith(Snake1.Bounds) Or PictureBox1.Bounds.IntersectsWith(Snake2.Bounds) Then
                 collisionS = True
 
@@ -101,7 +109,7 @@ Public Class Form2
             End If
         Next
 
-
+        'if carrot goes off screen it returns on the right side after a short time
         If Carrot1.Location.X < -60 Or collected = True Then
             Carrot1.Left += 2000
             Carrot1.Top += 110
@@ -118,6 +126,7 @@ Public Class Form2
         '  Carrot1.Show()
 
         '  End If
+        'if Snakes goes off screen it returns on the right side after a short time
         If Snake1.Location.X < -60 Then
             Snake1.Left += 1230
             Snake1.Top -= 50

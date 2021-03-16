@@ -25,12 +25,6 @@ Partial Class Form2
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form2))
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Carrot1 = New System.Windows.Forms.PictureBox()
-        Me.Snake2 = New System.Windows.Forms.PictureBox()
-        Me.Snake1 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.HowTo = New System.Windows.Forms.Button()
         Me.Quit = New System.Windows.Forms.Button()
@@ -41,6 +35,12 @@ Partial Class Form2
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.Timer3 = New System.Windows.Forms.Timer(Me.components)
+        Me.Carrot1 = New System.Windows.Forms.PictureBox()
+        Me.Snake2 = New System.Windows.Forms.PictureBox()
+        Me.Snake1 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
         CType(Me.Carrot1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Snake2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -63,72 +63,6 @@ Partial Class Form2
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1275, 404)
         Me.Panel1.TabIndex = 0
-        '
-        'Carrot1
-        '
-        Me.Carrot1.Image = Global.BunnyAdventure.My.Resources.Resources.carrot
-        Me.Carrot1.Location = New System.Drawing.Point(850, 16)
-        Me.Carrot1.Margin = New System.Windows.Forms.Padding(4)
-        Me.Carrot1.Name = "Carrot1"
-        Me.Carrot1.Size = New System.Drawing.Size(96, 96)
-        Me.Carrot1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
-        Me.Carrot1.TabIndex = 30
-        Me.Carrot1.TabStop = False
-        '
-        'Snake2
-        '
-        Me.Snake2.Image = CType(resources.GetObject("Snake2.Image"), System.Drawing.Image)
-        Me.Snake2.Location = New System.Drawing.Point(1104, 274)
-        Me.Snake2.Margin = New System.Windows.Forms.Padding(4)
-        Me.Snake2.Name = "Snake2"
-        Me.Snake2.Size = New System.Drawing.Size(96, 96)
-        Me.Snake2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
-        Me.Snake2.TabIndex = 29
-        Me.Snake2.TabStop = False
-        '
-        'Snake1
-        '
-        Me.Snake1.Image = CType(resources.GetObject("Snake1.Image"), System.Drawing.Image)
-        Me.Snake1.Location = New System.Drawing.Point(951, 192)
-        Me.Snake1.Margin = New System.Windows.Forms.Padding(4)
-        Me.Snake1.Name = "Snake1"
-        Me.Snake1.Size = New System.Drawing.Size(96, 96)
-        Me.Snake1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
-        Me.Snake1.TabIndex = 28
-        Me.Snake1.TabStop = False
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.BunnyAdventure.My.Resources.Resources.bunny__1_
-        Me.PictureBox1.Location = New System.Drawing.Point(50, 170)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(121, 94)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Image = Global.BunnyAdventure.My.Resources.Resources.forest
-        Me.PictureBox2.Location = New System.Drawing.Point(-629, 0)
-        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(4)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(1267, 400)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox2.TabIndex = 1
-        Me.PictureBox2.TabStop = False
-        '
-        'PictureBox3
-        '
-        Me.PictureBox3.Image = Global.BunnyAdventure.My.Resources.Resources.forest
-        Me.PictureBox3.Location = New System.Drawing.Point(635, 0)
-        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(4)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(1267, 400)
-        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox3.TabIndex = 2
-        Me.PictureBox3.TabStop = False
         '
         'Label1
         '
@@ -215,6 +149,72 @@ Partial Class Form2
         '
         Me.Timer3.Enabled = True
         Me.Timer3.Interval = 1
+        '
+        'Carrot1
+        '
+        Me.Carrot1.Image = Global.BunnyAdventure.My.Resources.Resources.carrot
+        Me.Carrot1.Location = New System.Drawing.Point(1074, 127)
+        Me.Carrot1.Margin = New System.Windows.Forms.Padding(4)
+        Me.Carrot1.Name = "Carrot1"
+        Me.Carrot1.Size = New System.Drawing.Size(96, 96)
+        Me.Carrot1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
+        Me.Carrot1.TabIndex = 30
+        Me.Carrot1.TabStop = False
+        '
+        'Snake2
+        '
+        Me.Snake2.Image = CType(resources.GetObject("Snake2.Image"), System.Drawing.Image)
+        Me.Snake2.Location = New System.Drawing.Point(1104, 274)
+        Me.Snake2.Margin = New System.Windows.Forms.Padding(4)
+        Me.Snake2.Name = "Snake2"
+        Me.Snake2.Size = New System.Drawing.Size(96, 96)
+        Me.Snake2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
+        Me.Snake2.TabIndex = 29
+        Me.Snake2.TabStop = False
+        '
+        'Snake1
+        '
+        Me.Snake1.Image = CType(resources.GetObject("Snake1.Image"), System.Drawing.Image)
+        Me.Snake1.Location = New System.Drawing.Point(951, 192)
+        Me.Snake1.Margin = New System.Windows.Forms.Padding(4)
+        Me.Snake1.Name = "Snake1"
+        Me.Snake1.Size = New System.Drawing.Size(96, 96)
+        Me.Snake1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
+        Me.Snake1.TabIndex = 28
+        Me.Snake1.TabStop = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.BunnyAdventure.My.Resources.Resources.bunny__1_
+        Me.PictureBox1.Location = New System.Drawing.Point(50, 170)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(121, 94)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = Global.BunnyAdventure.My.Resources.Resources.forest
+        Me.PictureBox2.Location = New System.Drawing.Point(-629, 0)
+        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(4)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(1267, 400)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox2.TabIndex = 1
+        Me.PictureBox2.TabStop = False
+        '
+        'PictureBox3
+        '
+        Me.PictureBox3.Image = Global.BunnyAdventure.My.Resources.Resources.forest
+        Me.PictureBox3.Location = New System.Drawing.Point(635, 0)
+        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(4)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(1267, 400)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox3.TabIndex = 2
+        Me.PictureBox3.TabStop = False
         '
         'Form2
         '

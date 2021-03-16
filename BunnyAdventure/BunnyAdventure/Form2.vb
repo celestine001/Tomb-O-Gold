@@ -1,7 +1,10 @@
-﻿Public Class Form2
+﻿Imports WMPLib
+Imports System.IO
+Public Class Form2
     Private Sub HowTo_Click(sender As Object, e As EventArgs) Handles HowTo.Click
         Me.Hide()
         Form4.Show()
+
     End Sub
 
     Private Sub Quit_Click(sender As Object, e As EventArgs) Handles Quit.Click
@@ -47,18 +50,20 @@
     End Sub
 
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        My.Computer.Audio.Play("TallGrass.wav",
+        AudioPlayMode.BackgroundLoop)
+        Carrot1.Left += 8000
 
     End Sub
 
     Private Sub Timer2_Tick(sender As Object, e As EventArgs) Handles Timer2.Tick
-        Carrot1.Left -= 5
-        Snake1.Left -= 5
-        Snake2.Left -= 5
+        Carrot1.Left -= 15
+        Snake1.Left -= 10
+        Snake2.Left -= 10
     End Sub
-    'Sub PlayLoopingBackgroundSoundFile()
-    '  My.Computer.Audio.Play(My.Resources.TallGrass.wav, AudioPlayMode.BackgroundLoop)
-    ' End Sub
+
     Private Sub Timer3_Tick(sender As Object, e As EventArgs) Handles Timer3.Tick
+
         Dim collisionC As Boolean
         Dim collisionS As Boolean
         Dim Score As Integer = 0
@@ -68,15 +73,15 @@
             If PictureBox1.Bounds.IntersectsWith(Carrot1.Bounds) Then
                 collisionC = True
                 collected = True
-            Else : collisionC = False
+
+
+            Else : collisionC = False And collected = False
             End If
 
             If collected = True Then
                 Score = Score + 1
-
                 Label1.Text = "Score: " + Score.ToString
                 Carrot1.Hide()
-
             Else : collected = False
             End If
 
@@ -84,32 +89,35 @@
                 collisionS = True
 
             End If
-            If Score = 16 Then
+            If Score = 8 Then
                 Me.Close()
-                Form5.Show()
+                Form6.Show()
+                My.Computer.Audio.Stop()
             End If
             If collisionS = True Then
                 Me.Close()
                 Form5.Show()
+                My.Computer.Audio.Stop()
             End If
         Next
 
+
         If Carrot1.Location.X < -60 Or collected = True Then
-            Carrot1.Left += 1230
+            Carrot1.Left += 2000
             Carrot1.Top += 110
             Carrot1.Show()
 
         End If
-        If Carrot1.Location.Y > 300 Then
-            Carrot1.Top += 50
-            Carrot1.Show()
+        'If Carrot1.Location.Y > 300 Then
+        ' Carrot1.Top += 50
+        ' Carrot1.Show()
 
-        End If
-        If Carrot1.Location.Y < 10 Then
-            Carrot1.Top -= 60
-            Carrot1.Show()
+        '  End If
+        '  If Carrot1.Location.Y < 10 Then
+        '  Carrot1.Top -= 60
+        '  Carrot1.Show()
 
-        End If
+        '  End If
         If Snake1.Location.X < -60 Then
             Snake1.Left += 1230
             Snake1.Top -= 50
@@ -119,7 +127,7 @@
 
         End If
         If Snake1.Location.Y < 60 Then
-            Snake1.Top -= 50
+            Snake1.Top += 120
 
         End If
         If Snake2.Location.Y > 300 Then
@@ -127,12 +135,13 @@
 
         End If
         If Snake2.Location.Y < 60 Then
-            Snake2.Top -= 50
+            Snake2.Top += 120
 
         End If
         If Snake2.Location.X < -60 Then
             Snake2.Left += 1230
-            Snake2.Top += 50
+            Snake2.Top -= 50
         End If
     End Sub
+
 End Class

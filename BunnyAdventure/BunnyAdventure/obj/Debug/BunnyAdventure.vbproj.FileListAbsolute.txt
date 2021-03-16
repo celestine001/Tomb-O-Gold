@@ -28,3 +28,4 @@ C:\Users\alfre\OneDrive\Documents\GitHub\Tomb-O-Gold\BunnyAdventure\BunnyAdventu
 C:\Users\alfre\OneDrive\Documents\GitHub\Tomb-O-Gold\BunnyAdventure\BunnyAdventure\obj\Debug\BunnyAdventure.exe
 C:\Users\alfre\OneDrive\Documents\GitHub\Tomb-O-Gold\BunnyAdventure\BunnyAdventure\obj\Debug\BunnyAdventure.xml
 C:\Users\alfre\OneDrive\Documents\GitHub\Tomb-O-Gold\BunnyAdventure\BunnyAdventure\obj\Debug\BunnyAdventure.pdb
+C:\Users\brad1\Documents\GitHub\Tomb-O-Gold\BunnyAdventure\BunnyAdventure\obj\Debug\BunnyAdventure.Form5.resources
